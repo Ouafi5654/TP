@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Bacteria | Wiki des Backrooms</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Bacteria</h1>
+                <p>Une entité du niveau 0.</p>
+            </header>
+            <main>
+                <div class="infobox">
+                    <h3>Bacteria</h3>
+                    <p><strong>Nom alternatif :</strong>La forme de vie (The Lifefrom)</p>
+                    <p><strong>Difficulté :</strong> 0/5</p>
+                    <p><strong>Hostilité :</strong> Extrmement hostile</p>
+                    <p><strong>Niveaux :</strong> 0</p>
+                    <p><strong>Apparence :</strong>Très grand, mince et de forme vaguement humanoïde, se tenant debout sur deux jambes.</p>
+                </div>
+                <img src="Bacteria_wiki.png" alt="Bacteria" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+                <h2>Description</h2>
+                <p>La forme de vie (également connue sous le nom de bactérie, entité, « l'ami de Marvin » ou simplement créature) est une créature humanoïde (ou peut-être un groupe de créatures) qui habite les Backrooms et s'attaque aux victimes qui se trouvent en sa présence. Elle est extrêmement hostile envers les humains et inquiète l'Institut de recherche Async et du M.E.G dans le cadre de sa mission d'étude des Backrooms.</p>
+                <p>La créature semble « prendre vie » à partir d'une substance noire ressemblant à de la moisissure qui se trouve dans les Backrooms. On suppose que cette entité a tué Nicolas Bolton, comme le prouvent les graves lésions tissulaires et la mutation du bacille Hay dans son corps. Elle a très probablement tué de nombreuses autres personnes qui se sont retrouvées dans les Backrooms. </p>
+
+                <h2>Comportement</h2>
+                <p>La Bacteria est une entité extrêmement agressive et prédatrice dans les Backrooms. Elle traque silencieusement ses victimes, réagit violemment au moindre bruit, et attaque dès qu’elle repère une présence humaine. Elle se déplace rapidement, possède une excellente vision, et ne relâche jamais sa cible une fois engagée. Son comportement est celui d’un chasseur implacable, guidé uniquement par l’instinct de tuer.</p>
+
+                <h2>Interactions</h2>
+                <p>La Bacteria interagit avec les humains comme un prédateur implacable : elle détecte le moindre bruit, rôde silencieusement dans les couloirs, et dès qu’elle repère une cible, elle fonce à grande vitesse pour attaquer sans relâche. Elle ne communique pas, ne montre aucune émotion, et ses apparitions sont souvent imprévisibles, déclenchées par des actions humaines ou des changements dans l’environnement.</p>
+
+                <h2>Origines</h2>
+                <p>Les Bacteria sont l'une des entités les plus anciennes documentées dans les Backrooms. Elles semblent être une partie intégrante de l'écosystème des niveaux basiques, peut-être issues d'une évolution ou d'une mutation dans cet environnement liminaire.</p>
+
+                <div class="button-group">
+                    <button class="button" onclick="window.location.href='level0.html'">Retour au Niveau 0</button>
+                    <button class="button" onclick="window.location.href='index.html'">Retour au Wiki Principal</button>
+                </div>
+            </main>
+        </div>
+        <img src="bacteria.png" alt="Bacteria" class="bacteria-image" onclick="playMonsterSound()">
+    </body>
+
+    <script>
+        function playMonsterSound() {
+            const audio = new Audio('monster.mp3');
+            audio.play();
+        }
+
+        // Add some dynamic effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const headings = document.querySelectorAll('h2');
+            headings.forEach(h => {
+                h.addEventListener('mouseover', () => {
+                    h.style.color = '#FF4500';
+                });
+                h.addEventListener('mouseout', () => {
+                    h.style.color = '#000';
+                });
+            });
+        });
+    </script>
+</html>

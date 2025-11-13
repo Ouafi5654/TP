@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Niveau 0 - Le Lobby | Wiki des Backrooms</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Niveau 0 - "Le Lobby"</h1>
+                <p>Le niveau le plus basique et le plus populaire des Backrooms.</p>
+            </header>
+            <main>
+                <div class="infobox">
+                    <h3>Niveau 0</h3>
+                    <p><strong>Nom alternatif :</strong> Le Lobby</p>
+                    <p><strong>Difficulté :</strong> 0/5</p>
+                    <p><strong>Entités :</strong> <a href="bacteria.html">Bacteria</a></p>
+                    <p><strong>Colonies :</strong> Aucune</p>
+                    <p><strong>Sorties :</strong> 1</p>
+                </div>
+                <img src="0.webp" alt="Niveau 0 - Le Lobby" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+                <h2>Description</h2>
+                <p>Le Niveau 0, également connu sous le nom de "Le Lobby", est le niveau le plus basique et le plus sûr des Backrooms. Il se compose d'une série infinie de couloirs monotones, semblables à ceux d'un bureau ou d'un hôtel abandonné. Les murs sont recouverts d'un papier peint jaune délavé, le sol est couvert d'une moquette humide et collante, et les plafonniers fluorescents bourdonnent constamment, créant une ambiance oppressante et surréaliste.</p>
+                <p>Ce niveau est généralement considéré comme sûr, car il n'y a pas d'entités hostiles connues qui y résident. Cependant, la monotonie infinie peut rapidement mener à la folie ou à l'épuisement mental.</p>
+
+                <h2>Bases</h2>
+                <p>Pour survivre dans le Niveau 0, les explorateurs doivent rester calmes et rationnels. La nourriture et l'eau sont rares, mais il est possible de trouver des distributeurs automatiques fonctionnels dans certaines zones. Les sorties sont marquées par des escaliers qui mènent au Niveau 1.</p>
+                <ul>
+                    <li>Évitez de paniquer : La panique peut vous faire tourner en rond indéfiniment.</li>
+                    <li>Écoutez les sons : Les bourdonnements des lumières peuvent masquer d'autres bruits importants.</li>
+                    <li>Marchez droit : Les couloirs sont labyrinthiques, mais suivre une direction constante peut aider.</li>
+                </ul>
+
+                <h2>Entrées</h2>
+                <p>Les entrées dans le Niveau 0 se produisent généralement par un phénomène appelé "noclip", où une personne traverse accidentellement une paroi solide dans la réalité normale. Cela peut arriver dans des endroits comme des bureaux, des écoles ou des centres commerciales abandonnés.</p>
+
+                <h2>Sorties</h2>
+                <p>Les sorties du Niveau 0 sont rares mais possibles. Elles consistent généralement en des escaliers qui descendent ou montent vers d'autres niveaux. Les escaliers menant au Niveau 1 sont les plus courants, mais ils peuvent être difficiles à trouver en raison de la nature labyrinthique du niveau.</p>
+
+                <h2>Entités</h2>
+                <p>La <a href="bacteria.html">Bacteria</a> est une entité connue dans le Niveau 0. C'est l'un des rares niveaux où les explorateurs peuvent se sentir en sécurité relative, bien que la bactérie puisse poser des risques.</p>
+
+                <h2>Colonies et Avant-Postes</h2>
+                <p>Il n'y a pas de colonies ou d'avant-postes connus dans le Niveau 0 en raison de son environnement hostile et monotone. Les explorateurs préfèrent généralement quitter ce niveau dès que possible.</p>
+
+                <div class="button-group">
+                    <button class="button" onclick="window.location.href='index.html'">Retour au Wiki Principal</button>
+                </div>
+            </main>
+        </div>
+        <img src="bacteria.png" alt="Bacteria" class="bacteria-image" onclick="playMonsterSound()">
+    </body>
+
+    <script>
+        function playMonsterSound() {
+            const audio = new Audio('monster.mp3');
+            audio.play();
+        }
+
+        
+
+        
+
+        // Add some dynamic effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const headings = document.querySelectorAll('h2');
+            headings.forEach(h => {
+                h.addEventListener('mouseover', () => {
+                    h.style.color = '#FF4500';
+                });
+                h.addEventListener('mouseout', () => {
+                    h.style.color = '#000';
+                });
+            });
+        });
+    </script>
+</html>

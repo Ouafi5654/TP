@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki des Backrooms – Niveau 0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay">
+        <header>
+            <h1>Wiki des Backrooms</h1>
+            <p>Niveau 0 – Les couloirs infinis.</p>
+        </header>
+
+        <main>
+            <p id="dynamic-text"></p>
+            <div class="button-group">
+                <button class="button" onclick="window.location.href='level0.html'" onmouseover="playHoverSound()">Explorer</button>
+            </div>
+        </main>
+    </div>
+
+    <img src="bacteria.png" alt="Bacteria" class="bacteria-image" onclick="playMonsterSound()">
+
+    <script>
+        function playMonsterSound() {
+            const audio = new Audio('monster.mp3');
+            audio.play();
+        }
+
+        function playHoverSound() {
+            const audio = new Audio('sound.wav');
+            audio.play();
+        }
+
+        const messages = [
+            "Vous sentez l’odeur de la moquette humide...",
+            "Les lampes bourdonnent faiblement.",
+            "Aucune sortie en vue.",
+            "Bienvenue au Niveau 0."
+        ];
+        let index = 0;
+
+        function typeWriter(text, i, callback) {
+            if (i < text.length) {
+                document.getElementById("dynamic-text").innerHTML =
+                    text.substring(0, i + 1) + '<span class="cursor">|</span>';
+                setTimeout(() => typeWriter(text, i + 1, callback), 80);
+            } else if (callback) {
+                setTimeout(callback, 1000);
+            }
+        }
+
+        function startAnimation() {
+            if (index < messages.length) {
+                typeWriter(messages[index], 0, () => {
+                    index++;
+                    setTimeout(startAnimation, 1500);
+                });
+            } else {
+                index = 0;
+                setTimeout(startAnimation, 1500);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", startAnimation);
+    </script>
+</body>
+</html>
