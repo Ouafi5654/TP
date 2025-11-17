@@ -23,10 +23,24 @@
 
     <img src="bacteria.png" alt="Bacteria" class="bacteria-image" onclick="playMonsterSound()">
 
+    <button id="hidden-button" style="position: absolute; top: 10px; left: 10px; opacity: 1; width: 50px; height: 50px; border: 2px solid black;" onclick="window.location.href='secret.html'"></button>
+
     <script>
+        let clickCount = 0;
+        let isPlaying = false;
+
         function playMonsterSound() {
+            if (isPlaying) return;
+            clickCount++;
             const audio = new Audio('monster.mp3');
             audio.play();
+            isPlaying = true;
+            audio.addEventListener('ended', () => {
+                isPlaying = false;
+            });
+            if (clickCount >= 5) {
+                window.location.href = 'secret.html';
+            }
         }
 
         function playHoverSound() {
